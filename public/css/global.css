@@ -2,6 +2,9 @@
 html{ 
  overflow: auto;
 }
+a{
+color:#F70;
+}
 .clear{  
   clear: both;
 }
@@ -45,15 +48,15 @@ form.navbar-search{
 
 .navbar-inverse .navbar-inner{
     height: 40px;
-    background-color: #f5f5f5;
-    background-image: linear-gradient(to bottom,#f5f5f5,#f5f5f5);
+    background-color: #eee;
+    background-image: linear-gradient(to bottom,#eee,#eee);
     border-color: #e5e5e5;
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5',endColorstr='#f5f5f5',GradientType=0);
-    BACKGROUND-COLOR: #f5f5f5
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eee',endColorstr='#eee',GradientType=0);
+    BACKGROUND-COLOR: #eee
 }
 
 .navbar-inverse .nav li a:hover,.navbar-inverse .nav .active a,.navbar-inverse .nav .active a:hover,.navbar-inverse .nav li.dropdown.open .dropdown-toggle{
-    background-color: #FFC631;
+    background-color: #EC6701;
     color: #FFF;
 
 }
@@ -65,7 +68,7 @@ form.navbar-search{
     width: 200px;
     display: inline;
     border: 0px;
-    background-color: #f6f6f6;
+    background-color: #fefefe;
     border-color: #e5e5e5;
     color:#000;
 }
