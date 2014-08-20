@@ -6,7 +6,7 @@ a{
   color:#F70;
     cursor: pointer;
 }
-a:hover,a:focus{
+a:hover,a:focus,a:-webkit-any-link{
     color:#F70;
 }
 .clear{  
