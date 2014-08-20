@@ -3,7 +3,11 @@ html{
  overflow: auto;
 }
 a{
-color:#F70;
+  color:#F70;
+    cursor: pointer;
+}
+a:hover,a:focus{
+    color:#F70;
 }
 .clear{  
   clear: both;
