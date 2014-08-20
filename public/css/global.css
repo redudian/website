@@ -41,15 +41,15 @@ form.navbar-search{
 
 .navbar-inverse .navbar-inner{
     height: 40px;
-    background-color: #039AE3;
-    background-image: linear-gradient(to bottom,#039AE3,#039AE3);
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom,#f5f5f5,#f5f5f5);
     border-color: #e5e5e5;
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#039AE3',endColorstr='#039AE3',GradientType=0);
-    BACKGROUND-COLOR: #039AE3
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5',endColorstr='#f5f5f5',GradientType=0);
+    BACKGROUND-COLOR: #f5f5f5
 }
 
 .navbar-inverse .nav li a:hover,.navbar-inverse .nav .active a,.navbar-inverse .nav .active a:hover,.navbar-inverse .nav li.dropdown.open .dropdown-toggle{
-    background-color: #038ed9;
+    background-color: #6c6c6c;
     color: #FFF;
 
 }
