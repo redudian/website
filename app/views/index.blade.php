@@ -295,7 +295,7 @@
 <div id="publishModal" class="modal hide"  tabindex="-1" aria-hidden="true" role="dialog" data-keyboard="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3>注册</h3>
+        <h3>发布</h3>
     </div>
     <div class="modal-body">
         <form class="form-horizontal">
@@ -313,7 +313,7 @@
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <button type="submit" class="btn btn-warning" style="width:220px;*width:215px;">发布</button>
+                    <button type="submit" class="btn btn-warning" style="width:280px;*width:275px;">发布</button>
                 </div>
             </div>
         </form>
