@@ -34,9 +34,9 @@
                     <i class="icon-search"></i>
                 </form>
                 <ul class="nav pull-right">
-<!--                    <li><button type="submit" class="btn">发布</button></li>-->
-                    <li><a href="#" class="login">登录</a></li>
-                    <li><a href="#" class="register">注册</a></li>
+                    <li><button style="margin-right:5px;" type="submit" href="#publishModal"  data-toggle="modal" class="btn btn-warning publish-btn">发布</button></li>
+                    <li><a href="#loginModal"  data-toggle="modal"  class="login">登录</a></li>
+                    <li><a href="#registerModal"  data-toggle="modal"  class="register">注册</a></li>
 
 <!--                    <li class="divider-vertical"></li>-->
 <!--                    <li class="dropdown">-->

@@ -2,11 +2,26 @@
 html{ 
  overflow: auto;
 }
-a{
-  color:#F70;
-    cursor: pointer;
+
+label{
+  cursor: default;
 }
-a:hover,a:focus,a:-webkit-any-link{
+
+.clear{  
+   height: 0px;
+}
+
+#content .feed-content a{
+  color:#333;
+}
+
+#content a{  
+  color: #888;
+  cursor: pointer;
+
+}
+
+#content a:hover{
     color:#F70;
 }
 .clear{  
@@ -55,7 +70,8 @@ form.navbar-search{
     background-color: #eee;
     background-image: linear-gradient(to bottom,#eee,#eee);
     border-color: #e5e5e5;
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eee',endColorstr='#eee',GradientType=0);
+    border-top: 0px;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5',endColorstr='#e5e5e5',GradientType=0);
     BACKGROUND-COLOR: #eee
 }
 
@@ -92,11 +108,18 @@ form.navbar-search{
 }
 
 .navbar .brand{  
-   color: #fff;
-   font-size: 16px;
-   padding-top: 15px;
+   color: #f40;
+   font-size: 14px;
+   font-weight: bold;;
+   padding-top: 14px;
+   padding-bottom: 6px;
+   padding-right: 10px;
+   font-family: tahoma, arial,'宋体';
    background: url("../img/logo.png") no-repeat;
-   padding-left: 45px;
+   padding-left: 40px;
+}
+.navbar-inverse .brand:hover{  
+   color: #f40;
 }
 
 
@@ -124,6 +147,7 @@ form.navbar-search{
 .feed-item{
    border-bottom: solid 1px #dfefef;  
    margin-top: 12px;
+   padding-bottom: 5px;
 }
 
 #dashboard-right{
@@ -217,6 +241,8 @@ form.navbar-search{
   width: 178px;
 }
 
-.modal-backdrop.fade.in{  
-   background-color: transparent;
+.modal-backdrop{
+   background:#fff;
+    opacity: .5;
+    filter: alpha(opacity=50);
 }

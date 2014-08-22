@@ -39,17 +39,6 @@ $(document).ready(function(){
     $(window).resize(function(){
       Responsive();
     });
-
-    //登录
-    $(".login").click(function(){    
-       $("#loginModal").modal("show");
-    });
-
-    //注册
-    $(".register").click(function(){    
-       $("#registerModal").modal("show");
-    });
-
 });
 
 //响应式

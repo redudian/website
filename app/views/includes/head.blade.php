@@ -3,7 +3,7 @@
 <html>
 <meta charset="utf-8">
 <meta name="description" content="">
-<meta name="author" content="Scotch">
+<meta name="author" content="redudian">
 {{ HTML::style('css/bootstrap.min.css')}}
 <!--[if IE 6]>
 {{ HTML::style('css/ie6.min.css')}}"
