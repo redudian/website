@@ -13,18 +13,29 @@
                     <li><a href="#">最新</a></li>
                     <li><a href="#">精选</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">板块 <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">版块<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">新闻</a></li>
                             <li><a href="#">自媒体</a></li>
-                            <li><a href="#">财经</a></li>
-                            <li><a href="#">体育</a></li>
-                            <li><a href="#">教育</a></li>
                             <li><a href="#">搞笑</a></li>
+                            <li><a href="#">财经</a></li>
                             <li><a href="#">娱乐</a></li>
-                            <li class="divider"></li>
+                            <li><a href="#">电视</a></li>
+                            <li><a href="#">电影</a></li>
+                            <li><a href="#">体育</a></li>
+<!--                            <li><a href="#">教育</a></li>-->
                             <li><a href="#">科技</a></li>
-                            <li><a href="#">编程</a></li>
+                            <li><a href="#">汽车</a></li>
+                            <li><a href="#">房产</a></li>
+                            <li><a href="#">社会</a></li>
+                            <li><a href="#">公益</a></li>
+                            <li><a href="#">问答</a></li>
+<!--                            <li><a href="#">情感</a></li>-->
+<!--                            <li><a href="#">美食</a></li>-->
+<!--                            <li><a href="#">旅游</a></li>-->
+<!--                            <li><a href="#">读书</a></li>-->
+                            <li class="divider"></li>
+                            <li><a href="#">更多>></a></li>
                         </ul>
                     </li>
                     <li><a href="#">话题</a></li>

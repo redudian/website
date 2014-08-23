@@ -224,7 +224,7 @@
             <div class="control-group">
                 <div class="controls">
                     <label class="checkbox">
-                        <input type="checkbox" checked="checked" name="remember_pwd">下次自动登录&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" style="width:13px;height:13px;" checked="checked" name="remember_pwd">下次自动登录&nbsp;&nbsp;&nbsp;&nbsp;
                         <a>忘记密码</a>
                     </label>
                     <button type="submit" class="btn btn-warning" style="width:220px;*width:215px;">登录</button>
@@ -250,6 +250,7 @@
         <form class="form-horizontal">
             <div class="control-group">
                 <label class="control-label">邮箱</label>
+
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-envelope"></i></span>
@@ -271,6 +272,7 @@
 
             <div class="control-group">
                 <label class="control-label">密码</label>
+
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-lock"></i></span>
@@ -280,7 +282,7 @@
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <button type="submit" class="btn btn-warning" style="width:220px;*width:215px;">注册</button>
+                    <button type="submit" class="btn btn-warning" style="width:220px;">注册</button>
                 </div>
             </div>
         </form>
@@ -290,30 +292,31 @@
 </div>
 
 
-
-
-<div id="publishModal" class="modal hide"  tabindex="-1" aria-hidden="true" role="dialog" data-keyboard="true">
+<div id="publishModal" class="modal hide" tabindex="-1" aria-hidden="true" role="dialog" data-keyboard="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3>发布</h3>
+        <h3>发布一条热度点</h3>
     </div>
     <div class="modal-body">
         <form class="form-horizontal">
             <div class="control-group">
-                <label class="control-label">标题</label>
+<!--                <label class="control-label">标题</label>-->
                 <div class="controls">
-                    <input type="text" name="title" class="input-xlarge">
+                    <span style="padding-right:20px;">标题</span><textarea type="text" rows="4" name="title" class="input-xlarge"></textarea>
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label">链接</label>
+<!--                <label class="control-label">链接</label>-->
                 <div class="controls">
-                    <input type="password" name="link" class="input-xlarge">
+                    <span style="padding-right:20px;">链接</span><input type="text" name="link" class="input-xlarge">
+                </div>
+                <div class="controls">
+                    <span style="padding-right:20px;">版块</span><input type="text" name="link" class="input-xlarge">
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <button type="submit" class="btn btn-warning" style="width:280px;*width:275px;">发布</button>
+                    <button type="submit" class="btn btn-warning" style="width:64px;margin-left:348px;height:30px;font-size:14px;">发布</button>
                 </div>
             </div>
         </form>

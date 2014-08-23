@@ -1,7 +1,6 @@
 $(document).ready(function(){
     
   Responsive();
-  
   //支持反对
   $("#content").delegate(".vote-up,.vote-down","click",function(){  
      var $vote = $(this).closest(".vote");
