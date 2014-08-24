@@ -17,25 +17,30 @@ class UserController extends BaseController
 
         //验证提示信息
         $messages = array(
-            'user_name.required' => '登录名不能为空!',
+            'user_name.required' => '用户名不能为空!',
             'user_name.min' => '长度不能少于4个字符!',
             'user_name.max' => '长度不能大于20个字符!',
             'user_name.alpha_dash' => '只允许数字、字母、下划线、中划线!',
-            'user_name.unique' => '已经存在!',
-            'password.required' => '不能为空!',
+            'user_name.unique' => '用户名已经存在!',
+            'nickname.required' => '昵称不能为空!',
+            'nickname.min' => '长度不能少于2个字符!',
+            'nickname.max' => '长度不能大于20个字符!',
+            'nickname.unique' => '昵称已经存在!',
+            'password.required' => '密码不能为空!',
             'password.min' => '长度不能少于6个字符!',
             'password.max' => '长度不能大于20个字符!',
-            'email.required' => '不能为空!',
+            'email.required' => '邮箱不能为空!',
             'email.email' => '邮箱地址不正确!!',
             'email.unique' => '邮箱已经存在!',
+            'email.max' => '长度不能大于40个字符!',
         );
 
         //验证规则
         $rules = array(
             'user_name' => 'required|min:4|max:20|alpha_dash|unique:user',
-            'nickname' => 'required|min:4|max:20|unique:user',
+            'nickname' => 'required|min:2|max:20|unique:user',
             'password' => 'required|min:6|max:20',
-            'email' => 'required|email|unique:user'
+            'email' => 'required|email|unique:user|max:40'
         );
         $validator = Validator::make($user_data, $rules, $messages);//验证
         if ($validator->fails()) {//验证失败
@@ -47,7 +52,7 @@ class UserController extends BaseController
             $user->nickname = $user_data['nickname'];
             $user->email = $user_data['email'];
             $user->password = $user_data['password'];
-            if ($user::save()) {
+            if ($user->save()) {
                 $result['msg'] = 'ok';
                 $result['code'] = 1;
             }else{

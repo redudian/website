@@ -32,6 +32,10 @@ label{
   z-index:10000;
 }
 
+.help-inline.error{
+    color: #D22;
+}
+
 .navbar-inverse .nav .dropdown-menu li a:hover,.navbar-inverse .nav .dropdown-menu li a:focus {
     background-image: linear-gradient(to bottom,#F70,#F70);
     background-color: #F70;

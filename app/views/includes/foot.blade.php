@@ -77,6 +77,7 @@
 
             <div class="control-group">
                 <label class="control-label">用户名</label>
+
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-user"></i></span>
@@ -86,6 +87,7 @@
             </div>
             <div class="control-group">
                 <label class="control-label">昵称</label>
+
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-fire"></i></span>
@@ -236,9 +238,10 @@
             var $nickname = $("#registerModal input[name='nickname']");
             var $email = $("#registerModal input[name='email']");
             var $password = $("#registerModal input[name='password']");
+            $("#registerModal span.help-inline").remove();//清除提示
             $.ajax({
                 url: "/user/add",
-                dataType: "html",
+                dataType: "json",
                 type: "post",
                 data: {
                     user_name: $user_name.val(),
@@ -247,9 +250,47 @@
                     password: $password.val()
                 },
                 success: function (data) {
+                    if (data.code == 1) {
+                        window.location.href = "/";//注册成功跳转
+                    } else {
+                        if (typeof(data.msg) == 'string') {
+                            alert(data.msg);
+                        }
+                        var user_name_info = "";
+                        var nickname_info = "";
+                        var email_info = "";
+                        var password_info = "";
+                        if (typeof(data.msg.user_name) != 'undefined') {//用户名验证
+                            user_name_info = '<span class="help-inline error">' + data.msg.user_name[0] + "</span>";
+                        } else {
+                            user_name_info = '<span class="help-inline success"></span>';
+                        }
+                        $user_name.closest(".controls").append(user_name_info);
 
+                        if (typeof(data.msg.nickname) != 'undefined') {//昵称验证
+                            nickname_info = '<span class="help-inline error">' + data.msg.nickname[0] + "</span>";
+                        } else {
+                            nickname_info = '<span class="help-inline success"></span>';
+                        }
+                        $nickname.closest(".controls").append(nickname_info);
+
+                        if (typeof(data.msg.email) != 'undefined') {//邮箱验证
+                            email_info = '<span class="help-inline error">' + data.msg.email[0] + "</span>";
+                        } else {
+                            email_info = '<span class="help-inline success"></span>';
+                        }
+                        $email.closest(".controls").append(email_info);
+
+                        if (typeof(data.msg.password) != 'undefined') {//密码验证
+                            password_info = '<span class="help-inline error">' + data.msg.password[0] + "</span>";
+                        } else {
+                            password_info = '<span class="help-inline success"></span>';
+                        }
+                        $password.closest(".controls").append(password_info);
+                    }
+                    return false;
                 }
             });
-     });
+        });
     });
 </script>
