@@ -28,6 +28,10 @@ label{
   clear: both;
 }
 
+.ui-autocomplete{
+  z-index:10000;
+}
+
 .navbar-inverse .nav .dropdown-menu li a:hover,.navbar-inverse .nav .dropdown-menu li a:focus {
     background-image: linear-gradient(to bottom,#F70,#F70);
     background-color: #F70;

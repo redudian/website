@@ -8,6 +8,7 @@
 <!--[if IE 6]>
 {{ HTML::style('css/ie6.min.css')}}"
 <![endif]-->
-{{ HTML::style('css/global.css')}}
 {{ HTML::style('css/jqcloud.css')}}
-<title>13123</title>
+{{ HTML::style('jquery-ui/jquery-ui.min.css')}}
+{{ HTML::style('css/global.css')}}
+<title>热度点</title>
