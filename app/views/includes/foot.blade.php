@@ -77,15 +77,22 @@
 
             <div class="control-group">
                 <label class="control-label">用户名</label>
-
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-user"></i></span>
-                        <input type="text" name="username">
+                        <input type="text" name="user_name">
                     </div>
                 </div>
             </div>
-
+            <div class="control-group">
+                <label class="control-label">昵称</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-fire"></i></span>
+                        <input type="text" name="nickname">
+                    </div>
+                </div>
+            </div>
             <div class="control-group">
                 <label class="control-label">密码</label>
 
@@ -189,36 +196,60 @@
             "Scala",
             "Scheme"
         ];
+
         $("#linkSelectSection").autocomplete(
             {
 //                source: availableTags,
-                source: function(request, response) {
+                source: function (request, response) {
                     var term = request.term;
-                    if (term=='') {
-                        response($.map(availableTags, function(item) {
+                    if (term == '') {
+                        response($.map(availableTags, function (item) {
                             return { label: item, value: item}
                         }));
                     } else {
-                    $.ajax({
-                        url: "http://demo.com/ajax/Autocomplete.ashx",
-                        dataType: "json",
-                        data: {
-                            //top: 10,
-                            key: request.term
-                        },
-                        success: function(data) {
-                            response($.map(data.citylist, function(item) {
-                                return { label: item.city, value: item.city }
-                            }));
-                        }
-                    });}
+                        $.ajax({
+                            url: "http://demo.com/ajax/Autocomplete.ashx",
+                            dataType: "json",
+                            data: {
+                                //top: 10,
+                                key: request.term
+                            },
+                            success: function (data) {
+                                response($.map(data.citylist, function (item) {
+                                    return { label: item.city, value: item.city }
+                                }));
+                            }
+                        });
+                    }
                 },
                 minLength: 0,
-               search:"",
-            select: function (event, ui) {
-           },
-        autoFocus: false,
-        delay:0
-    });
+                search: "",
+                select: function (event, ui) {
+                },
+                autoFocus: false,
+                delay: 0
+            });
+
+        $("#registerModal button[type='submit']").click(function (e) {
+            e.preventDefault();
+            var $user_name = $("#registerModal input[name='user_name']");
+            var $nickname = $("#registerModal input[name='nickname']");
+            var $email = $("#registerModal input[name='email']");
+            var $password = $("#registerModal input[name='password']");
+            $.ajax({
+                url: "/user/add",
+                dataType: "html",
+                type: "post",
+                data: {
+                    user_name: $user_name.val(),
+                    nickname: $nickname.val(),
+                    email: $email.val(),
+                    password: $password.val()
+                },
+                success: function (data) {
+
+                }
+            });
+     });
     });
 </script>

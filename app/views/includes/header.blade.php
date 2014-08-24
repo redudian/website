@@ -48,7 +48,6 @@
                     <li><button style="margin-right:5px;" type="submit" href="#publishModal"  data-toggle="modal" class="btn btn-warning publish-btn">发布</button></li>
                     <li><a href="#loginModal"  data-toggle="modal"  class="login">登录</a></li>
                     <li><a href="#registerModal"  data-toggle="modal"  class="register">注册</a></li>
-
 <!--                    <li class="divider-vertical"></li>-->
 <!--                    <li class="dropdown">-->
 <!--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
