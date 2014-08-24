@@ -15,5 +15,7 @@ Route::get('/', 'indexController@index');
 
 Route::get('/login', function()
 {
+
+    var_dump(User::find(1)->toArray());exit;
     return View::make('login');
 });
